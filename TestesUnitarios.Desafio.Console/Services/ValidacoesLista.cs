@@ -14,13 +14,19 @@ namespace TestesUnitarios.Desafio.Console.Services
             return contem;
         }
 
-        public List<int> MultiplicarNumerosLista(List<int> lista, int numero)
+        public bool NaoDeveConterONumero10NaLista(List<int> lista, int numero)
         {
-            var listaMultiplicada = lista.Select(x => x * numero).ToList();
+            var naoContem = !lista.Contains(numero);
+            return naoContem;
+        }
+
+        public List<int> DeveMultiplicarOsElementosDaListaPor2(List<int> lista)
+        {
+            var listaMultiplicada = lista.Select(x => x * 2).ToList();
             return listaMultiplicada;
         }
 
-        public int RetornarMaiorNumeroLista(List<int> lista)
+        public int DeveRetornar9ComoMaiorNumeroDaLista(List<int> lista)
         {
             return lista.Max();
         }
